@@ -31,7 +31,6 @@ public class Customer {
         this.name=name;
         this.phNo=phNo;
         this.email=email;
-        this.membership=membership;
         this.discPer=discPer;
 
     }
@@ -41,7 +40,6 @@ public class Customer {
         System.out.println("Customer name : "+name);
         System.out.println("Customer phone number : "+phNo);
         System.out.println("Customer email : "+email);
-        System.out.println("Customer membership : "+membership);
         System.out.println("Customer discount percentage : "+discPer);
 
     }
