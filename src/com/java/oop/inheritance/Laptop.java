@@ -16,10 +16,13 @@ public class Laptop extends Product{
         this.operatingSystem=operatingSystem;
 
     }
-    public void displayLaptopDetails(){
-        displayProductDetails();
+    public void displayDetails(){
+        super.displayDetails();
         System.out.println("Hard Disk Size : "+hardDiskSize);
         System.out.println("Ram : "+ram);
         System.out.println("Operating System : "+operatingSystem);
+    }
+    void displayDetails(String company,int year,boolean isAvailable){
+        System.out.println("Company: "+company+" Year : "+year+" Is Product Available :"+isAvailable);
     }
 }

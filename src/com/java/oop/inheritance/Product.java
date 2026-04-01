@@ -21,7 +21,7 @@ public class Product {
         this.isAvailable=isAvailable;
     }
 
-    public void displayProductDetails(){
+    public void displayDetails(){
         System.out.println("Id : "+id);
         System.out.println("Name : "+name);
         System.out.println("maxRetailPrice : "+maxRetailPrice);
@@ -29,6 +29,14 @@ public class Product {
         System.out.println("Rating : "+rating);
         System.out.println("Product Available : "+isAvailable);
     }
+
+    void displayDetails(String company){
+        System.out.println("Company : "+company);
+    }
+    void displayDetails(String company,int year){
+        System.out.println("Company : "+company + " Year : "+year);
+    }
+
 
 
 }

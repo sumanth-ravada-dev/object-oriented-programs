@@ -10,4 +10,9 @@ public class Service {
     void validate(WindowsLaptop windowsLaptop){
         System.out.println("Validating Windows Laptop");
     }
+    void displayDetails(Product product){
+        product.displayDetails();
+    }
+
+
 }

@@ -14,8 +14,8 @@ public class Book extends Product{
         this.pages=pages;
         this.publisher=publisher;
     }
-    public void displayBookDetails(){
-        displayProductDetails();
+    public void displayDetails(){
+        super.displayDetails();
         System.out.println("Book Author : "+author);
         System.out.println("Book pages : "+pages);
         System.out.println("Book Publisher : "+publisher);

@@ -6,4 +6,5 @@ public class WindowsLaptop extends Laptop{
         super();//Super Constructor is called(Laptop Constructor)
         System.out.println("Windows Laptop Constructor is Called");
     }
+
 }
