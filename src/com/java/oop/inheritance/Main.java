@@ -24,6 +24,11 @@ public class Main {
          service.validate(laptop);
          service.validate(windowsLaptop);
 
+         PremiumCustomer pc=new PremiumCustomer();
+         
+         PremiumCustomer premiumCustomer=new PremiumCustomer(32,"Sathish",7454447894L,"sathi12@gmil.com",12.45f,'D',1500,"T-Shirt");
+         premiumCustomer.displayPremiumCustomerDetails();
+
 
     }
 }
