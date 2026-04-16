@@ -3,6 +3,7 @@ package com.java.oop.collection;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class SetTest {
     public static void main(String[] args) {
@@ -46,5 +47,12 @@ public class SetTest {
         while (iterator.hasNext()){
             System.out.println(iterator.next().toUpperCase());
         }
+
+        Set<String> emails=new TreeSet<>();
+        emails.add("madhu@gmail.com");
+        emails.add("shyam@gmail.com");
+        emails.add("naresh@gmail.com");
+        emails.add("aravindh@gmail.com");
+        System.out.println(emails);
     }
 }
