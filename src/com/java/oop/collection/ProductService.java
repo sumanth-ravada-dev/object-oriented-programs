@@ -13,14 +13,14 @@ public class ProductService {
     to Functional Programming (FP)
      */
 
-    List<String> getProductNamesList(List<Product> products){
-
+//    List<String> getProductNamesList(List<Product> products){
+//
 //        List<String> productNames =new ArrayList<>();
 //        for(Product product: products){
 //            productNames.add();
 //        }
 //        return productNames;
-    }
+//    }
     List<Product> getProductByPriceRange(List<Product> products,int minPrice){
         return null;
     }
