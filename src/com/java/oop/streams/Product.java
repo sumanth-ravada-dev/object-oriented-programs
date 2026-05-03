@@ -1,5 +1,7 @@
 package com.java.oop.streams;
 
+import java.util.Objects;
+
 public class Product {
     int id;
     String name;
@@ -76,6 +78,18 @@ public class Product {
 
     public void setManufacturedYear(int manufacturedYear) {
         this.manufacturedYear = manufacturedYear;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return id == product.id && maxRetailPrice == product.maxRetailPrice && discountPercentage == product.discountPercentage && isAvailable == product.isAvailable && manufacturedYear == product.manufacturedYear && Objects.equals(name, product.name) && Objects.equals(company, product.company) && Objects.equals(category, product.category);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, maxRetailPrice, discountPercentage, isAvailable, company, category, manufacturedYear);
     }
 
     @Override
