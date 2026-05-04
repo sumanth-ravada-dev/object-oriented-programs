@@ -90,5 +90,21 @@ public class Streams {
         double averagePrice=products.stream().mapToDouble(Product::getMaxRetailPrice).average().orElse(0);
         System.out.println("Average Price : "+averagePrice);
 
+        Map<Boolean,List<Product>> productsBasedOnAvailability=products.stream().collect(Collectors.partitioningBy(Product::isAvailable));
+        System.out.println(productsBasedOnAvailability);
+
+        List<Product> productsGreaterThan80000=products.stream().filter(product -> product.getMaxRetailPrice()>80000).toList();
+        System.out.println(productsGreaterThan80000);
+
+        long availableProductsCount=products.stream().filter(product -> product.isAvailable==true).count();
+        System.out.println(availableProductsCount);
+
+        boolean isParticularCompanyProductsAvailable= products.stream().anyMatch(product -> product.getCompany().equals("Apple"));
+        System.out.println(isParticularCompanyProductsAvailable);
+
+        boolean isAllProductsAvailable=products.stream().allMatch(Product::isAvailable);
+        System.out.println(isAllProductsAvailable);
+
+
     }
 }
