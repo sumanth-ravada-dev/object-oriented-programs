@@ -10,10 +10,20 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class Streams {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args)  {
         CsvReader csvReader=new CsvReader();
-        List<Customer> customers=csvReader.getCustomersFromCsv();
-        List<Product> products=csvReader.getProductsFromCsv();
+        List<Customer> customers= null;
+        try {
+            customers = csvReader.getCustomersFromCsv();
+        } catch (IOException e) {
+            System.out.println("Error reading csv file: "+e.getMessage());
+        }
+        List<Product> products= null;
+        try {
+            products = csvReader.getProductsFromCsv();
+        } catch (IOException e) {
+            System.out.println("Error reading csv file: "+e.getMessage());
+        }
 
         //intermediate operation
         /*
